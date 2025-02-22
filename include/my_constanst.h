@@ -3,8 +3,8 @@
 #define SCL_PIN 15
 
 // Botões A e B
-#define BUTTON_B 5
-#define BUTTON_A 6
+#define BUTTON_B 6
+#define BUTTON_A 5
 
 // Buzer
 #define BUZZER_A 21
