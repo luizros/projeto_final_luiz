@@ -1,0 +1,55 @@
+\section{Escopo do Projeto}\label{sec:introducao}
+
+\subsection{Aprensentação do projeto}
+Os microcontroladores têm-se consolidado como uma solução versátil para o desenvolvimento de sistemas embarcados, permitindo a criação de dispositivos interativos e educativos de baixo custo. No contexto de jogos digitais, eles possibilitam o desenvolvimento de experiências interativas que estimulam habilidades cognitivas, como memória e raciocínio lógico \cite{valente1999aprendizado, prensky2001digital}.
+
+Dentre os diversos tipos de jogos educativos, os baseados em memória se destacam por desafiar os jogadores a memorizar e reproduzir padrões visuais e sonoros. Trabalhos anteriores já demonstraram a viabilidade do uso de microcontroladores para esse tipo de aplicação, como no desenvolvimento de jogos de memória utilizando LEDs e botões \cite{gomes2011memoria} \cite{gamebuino2016} \cite{makerbuino2016}. Esses projetos evidenciam o potencial de tais dispositivos na criação de experiências interativas acessíveis e eficazes no aprendizado.
+
+Neste contexto, o presente projeto, denominado Memorize a Posição, propõe o desenvolvimento de um jogo educativo baseado na plataforma BitdogLab. Essa plataforma é equipada com um microcontrolador RP2040, uma matriz de LEDs, um display, joystick e botões, proporcionando os recursos necessários para a criação de um sistema embarcado focado em jogos educacionais. O objetivo é estimular a memória e a atenção dos alunos do ensino fundamental por meio de desafios progressivos de memorização e reprodução de padrões visuais, contribuindo para o processo de ensino-aprendizagem de forma lúdica e interativa.
+
+\subsection{Objetivos}
+O objetivo principal do projeto é desenvolver um jogo educativo interativo que auxilie professores no ensino fundamental, estimulando a atenção, memória e raciocínio lógico dos alunos. Especificamente, busca-se:
+
+\begin{itemize}
+\item Desenvolver um sistema embarcado baseado em um microcontrolador para a implementação do jogo;
+\item Criar um jogo que desafie os alunos a memorizar e reproduzir sequências visuais;
+\item Tornar o jogo acessível e intuitivo para aplicação em ambientes escolares;
+\item Explorar o uso de componentes eletrônicos de baixo custo para viabilizar a replicação do projeto.
+\end{itemize}
+
+\subsection{Principais Requisitos}
+\subsubsection{Requisitos Funcionais (RF)}
+\begin{itemize}
+\item RF01: O sistema deve permitir a geração aleatória de padrões de LEDs;
+\item RF02: O jogador deve interagir com a matriz de LEDs através do joystick e botões;
+\item RF03: O sistema deve fornecer feedback visual e textual ao jogador;
+\item RF04: O jogo deve aumentar a dificuldade progressivamente conforme o jogador avança;
+\item RF05: O sistema deve registrar e exibir a pontuação do jogador.
+\end{itemize}
+
+\subsubsection{Requisitos Não Funcionais (RNF)}
+\begin{itemize}
+\item RNF01: O sistema deve ser de baixo custo e acessível para instituições educacionais;
+\item RNF02: O hardware deve ser resistente e adequado para uso contínuo em sala de aula;
+\item RNF03: O software deve ter um tempo de resposta adequado para interação em tempo real;
+\item RNF04: A interface deve ser simples e intuitiva para facilitar a usabilidade pelos alunos;
+\item RNF05: O sistema deve consumir baixa energia para aumentar a autonomia do dispositivo.
+\end{itemize}
+
+\subsection{Descrição do Funcionamento}
+O jogo consiste em acender LEDs em posições aleatórias em uma matriz, desafiando o jogador a memorizar e reproduzir a sequência corretamente. A dificuldade aumenta progressivamente conforme o jogador avança, exigindo maior atenção e memorização.
+
+A interação ocorre por meio de um joystick, que permite ao jogador navegar pela matriz, e botões para confirmar ou corrigir suas escolhas. O sistema avalia as respostas, fornecendo feedback imediato por meio da matriz de LEDs e de uma tela OLED.
+
+\subsection{Justificativa}
+A justificativa para o desenvolvimento deste projeto baseia-se na crescente necessidade de ferramentas interativas para o ensino fundamental. Estudos mostram que a gamificação e o uso de tecnologia em sala de aula aumentam o engajamento e a retenção de conhecimento \cite{gee2003video}. Além disso, o uso de sistemas embarcados torna o projeto acessível e replicável em diferentes contextos educacionais.
+
+\subsection{Originalidade}
+O diferencial deste projeto está na combinação entre um jogo de memória e a interatividade proporcionada por sistemas embarcados. Diferente de aplicativos tradicionais de jogos educativos, a experiência física de interação com os LEDs e o joystick proporciona um aprendizado mais dinâmico e imersivo \cite{papert1980mindstorms}. Além disso, a possibilidade de adaptação do sistema para diferentes idades e níveis de dificuldade amplia seu potencial de aplicação.
+
+
+
+
+
+
+
