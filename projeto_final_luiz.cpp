@@ -31,6 +31,7 @@ void exibirErro() {
     npWrite();
     sleep_ms(2000);
     npClear();
+    npWrite();
 }
 
 void atualizarDisplay(SSD1306 &display, int cursorX, int cursorY, int etapa, int itensRestantes, bool erro) {
@@ -64,9 +65,10 @@ void jogarMemoria(Joystick &joystick, SSD1306 &display) {
     while (true) {
         switch (estado) {
             case BEM_VINDO:
+                npClear();
                 display.clear();
-                drawText(&display, font_8x8, "JOGO DA MEMORIA", 20, 20);
-                drawText(&display, font_8x8, "APERTE O BOTÃO A", 20, 30);
+                drawText(&display, font_8x8, "JOGO DA MEMORIA", 0, 20);
+                drawText(&display, font_8x8, "APERTE O BOTAO A", 0, 30);
                 display.sendBuffer();
 
                 // Verifica se o botão A foi pressionado
@@ -167,15 +169,14 @@ void jogarMemoria(Joystick &joystick, SSD1306 &display) {
                 } else {
                     exibirErro();
                     maxSequencia = 1;
-                    estado = GERAR_POSICAO;
+                    estado = BEM_VINDO;
                 }
                 break;
         }
     }
 }
 
-
-int main() {
+void config(){
     stdio_init_all();
     i2c_init(i2c1, 1000000);
     gpio_set_function(SDA_PIN, GPIO_FUNC_I2C);
@@ -189,6 +190,11 @@ int main() {
     gpio_set_dir(BUTTON_B, GPIO_IN);
     gpio_pull_up(BUTTON_B);
     sleep_ms(250);
+}
+
+
+int main() {
+    config();
     SSD1306 display = SSD1306(i2c1, 0x3C, Size::W128xH64);
     Joystick joystick(vRx_PIN, vRy_PIN, SW, 0, 1);
     joystick.begin();
